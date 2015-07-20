@@ -1,0 +1,4 @@
+# This folder contains saved games used for restoring the various sessions
+# ignore all its content except this file
+*
+!.gitignore
