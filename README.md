@@ -9,13 +9,13 @@ modified version of Brandon Rhodes'
 ### Requirements
 
 You need to build and install the adventure library contained in the folder
-... by using the following commands:
+`adventure-1.3` by using the following commands:
 ```bash
-$ ?? build
-$ sudo ?? install
+$ python3 setup.py build
+$ sudo python3 setup.py install
 ```
 Moreover the following libraries should be installed:
- * Telegram bot library <link>
+ * [python-telegram-bot-api](https://github.com/puehcl/python-telegram-bot-api)
  * process management <link>
  * other
 
@@ -27,7 +27,7 @@ named 'apikey.txt'. This key can be obtained by following the instuctions on
 
 ## Run
 
-To run the program simpy issue: `python3 ??`
+To run the program simpy issue: `python3 CaveBot.py`
 
 To exit type Ctrl+C
 
