@@ -43,7 +43,9 @@ class GameProcess:
 	
 	# Restart the game
 	def restart(self):
-		os.remove(str(self.id))
+		if os.path.isfile(str(self.id)):
+			os.remove(str(self.id))
+		
 		self.proc.kill(0)
 		self.proc = pexpect.spawnu('python3 -madventure')
 		
