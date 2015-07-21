@@ -16,8 +16,8 @@ $ sudo python3 setup.py install
 ```
 Moreover the following libraries should be installed:
  * [python-telegram-bot-api](https://github.com/puehcl/python-telegram-bot-api)
- * process management <link>
- * other
+ * requests
+ * pexpect
 
 ### API key
 
