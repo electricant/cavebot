@@ -79,8 +79,9 @@ if __name__ == "__main__":
 	# create games list
 	global games
 	games = ProcessList()
-	# intercept SIGINT (Ctrl+C)
+	# intercept SIGINT (Ctrl+C) and SIGTERM
 	signal.signal(signal.SIGINT, exitGracefully)
+	signal.signal(signal.SIGTERM, exitGracefully)
 	# create bot
 	bot = botbuilder.BotBuilder(apikey_file="apikey.txt")
 	# bot actions
