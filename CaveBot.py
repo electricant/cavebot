@@ -19,7 +19,7 @@ def help_text(update):
 	return "@cave_bot - Play Colossal Cave Adventure!\n" \
 		"This is the list of commands:\n\n" \
 		"/restart - Starts a new game\n" \
-		"/cave - Tell the bot what to do\n" \
+		"/cave - Send a command (Eg. /cave look)\n" \
 		"/help - Display this help text.\n\n" \
 		"Created by: The Electric Ant\n" \
 		"If you like this game please consider making a donation " \
