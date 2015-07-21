@@ -20,7 +20,10 @@ def help_text(update):
 		"This is the list of commands:\n\n" \
 		"/restart - Starts a new game\n" \
 		"/cave - Tell the bot what to do\n" \
-		"/help - Display this help text."
+		"/help - Display this help text.\n\n" \
+		"Created by: The Electric Ant\n" \
+		"If you like this game please consider making a donation " \
+		"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XSKMSYEX77FZ4"
 
 # Cleanup and save game before quitting
 def exitGracefully(signal, frame):
