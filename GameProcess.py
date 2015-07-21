@@ -69,16 +69,19 @@ class GameProcess:
 			return "%s\nWHAT?" % cmd
 
 		self.proc.sendline(cmd)
-		self.proc.expect('>')
-		return self.proc.before
+		
+		return self.getOutput()
 	
 	# Get output without sending command (avoid locking if unneeded)
 	def getOutput(self):
+		retStr = ""
+		
 		try:
-			self.proc.expect('>', timeout=1)
-			return self.proc.before
+			while True:
+				self.proc.expect('>', timeout=1)
+				retStr = retStr + self.proc.before
 		except pexpect.TIMEOUT:
-			return ""
+			return retStr
 	
 	# Read the content of 'active' variable
 	def isActive(self):

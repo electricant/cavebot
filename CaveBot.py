@@ -37,6 +37,7 @@ def exitGracefully(signal, frame):
 	
 	print("GOODBYE.")
 	sys.exit(0)
+
 # Start a new game
 def start(update):
 	global games
