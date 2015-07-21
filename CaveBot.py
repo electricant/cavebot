@@ -37,6 +37,15 @@ def exitGracefully(signal, frame):
 	
 	print("GOODBYE.")
 	sys.exit(0)
+# Start a new game
+def start(update):
+	global games
+	
+	game = games.getGame(update.chat.id)
+	if game == None:
+		return "Sorry, the server is busy. Try again later."
+	
+	return game.getOutput()
 
 # process user input
 def process_input(update):
@@ -75,6 +84,7 @@ if __name__ == "__main__":
 	bot = botbuilder.BotBuilder(apikey_file="apikey.txt")
 	# bot actions
 	bot.do_when(lambda update: (True), logger, botbuilder.DO_NOT_CONSUME)
+	bot.send_message_when("start", start)
 	bot.send_message_when("cave", process_input)
 	bot.send_message_when("help", help_text)
 	bot.send_message_when("restart", restart)
